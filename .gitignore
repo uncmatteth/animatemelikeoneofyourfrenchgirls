@@ -1,0 +1,8 @@
+node_modules/
+.npm-cache/
+cutaway-out/
+output/
+private/
+.env*
+*.log
+__pycache__/
