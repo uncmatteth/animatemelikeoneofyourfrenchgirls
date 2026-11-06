@@ -77,6 +77,11 @@ npm test
 ```
 
 `scripts/build.mjs` and `scripts/capture.mjs` wrap the pinned upstream kit.
+Capture requires an explicit `--out`; the parent checks a fresh decodable result.
+For painted actors, `lib/atlas-rig.js` supports complete separate parts with
+overlap at joints. `lib/canvas-puppet.js` is an experimental polygon clipping
+helper; clipping a flattened pose failed the initial character test. Do not use
+that method for production characters without clean repaired layers.
 `CHROMIUM`, `FFMPEG`, `FFPROBE`, `PYTHON`, `CUTAWAY_DEPS` and `CUTAWAY_OUT`
 remain available. Full upstream robotic examples are in `vendor/cutaway/sims`.
 

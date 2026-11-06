@@ -28,7 +28,9 @@ This is the toolkit we're developing for the series. It is not a promise that
 one picture automatically becomes a finished animated episode. Human acting,
 clean character layers and hidden views still need to be built and checked.
 The included title example proves rendering and title motion; it does not prove
-finished human animation. Production artwork, scripts, voices and unreleased
+finished human animation. A short private character test currently demonstrates
+limited 2D joint and mouth motion. Walking, physical prop contact and full acting
+remain unproved; the complete opening is not delivered by this release. Production artwork, scripts, voices and unreleased
 episode footage are kept outside this public repo.
 
 ## Install for Codex
@@ -58,6 +60,9 @@ node scripts/check-scene.mjs examples/door-and-title/timeline.json
 node scripts/build.mjs ./examples/door-and-title --out ./output
 node scripts/capture.mjs ./output/dist/door-and-title.html --size 1280x720 --fps 24 --to 8 --out ./output/title-proof.mp4
 ```
+
+The wrapper requires `--out` and checks that the result is fresh, nonempty and
+decodable with FFprobe. This is technical output validation, not visual acceptance.
 
 Review stills before a long render:
 
